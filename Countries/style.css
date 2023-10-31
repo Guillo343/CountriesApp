@@ -1,0 +1,192 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+  }
+  /* Style for the video container */
+.video-container {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Adjust the height as needed */
+    overflow: hidden;
+  }
+  
+  /* Style for the video element */
+  #background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensure the video covers the entire container */
+  }
+  
+  /* Additional styling for the container and its contents */
+  .container {
+    position: relative;
+    z-index: 1; /* Ensure content appears above the video */
+    background: rgba(255, 255, 255, 0.7);  /*Background color for the content container*/
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 50px; /* Adjust as needed */
+  }
+  
+ /* Container for the main content */
+.container {
+    background-color: rgba(255, 255, 255, 1);
+    width: 80vw; /* Maximum width for responsiveness */
+    max-width: 37.5em; /* Maximum content width */
+    padding: 3em 2.5em; /* Internal spacing */
+    position: absolute; /* Positioning method */
+    transform: translate(-50%, -50%); /* Centering horizontally and vertically */
+    top: 50%; /* Top position */
+    left: 50%; /* Left position */
+    border-radius: 0.62em; /* Rounded corners */
+    box-shadow: 0 1.25em 1.8em rgba(8, 21, 65, 0.25); /* Box shadow for depth */
+  }
+  
+  /* Styling for the search input and button */
+  .search-wrapper {
+    display: grid; /* Grid layout for search input and button */
+    grid-template-columns: 9fr 3fr; /* Column proportions */
+    gap: 1.25em; /* Gap between columns */
+  }
+  
+  /* Styling for the search button */
+  .search-wrapper button {
+    font-size: 1em; /* Font size */
+    background-color: #3d64e6; /* Background color */
+    color: #ffffff; /* Text color */
+    padding: 0.8em 0; /* Internal spacing */
+    border: none; /* No border */
+    border-radius: 1.5em; /* Rounded corners */
+  }
+  
+  /* Hover effect for the button */
+  button:hover {
+    cursor: pointer; /* Change cursor on hover */
+    background-color: #0130cc; /* Background color change on hover */
+    transition: 0.3s; /* Smooth transition */
+  }
+  
+  /* Styling for the search input field */
+  .search-wrapper input {
+    font-size: 1em; /* Font size */
+    padding: 0 0.62em; /* Internal spacing */
+    border: none; /* No border */
+    border-bottom: 2px solid #3d64e6; /* Bottom border with color */
+    outline: none; /* Remove the focus outline */
+    color: #222a43; /* Text color */
+  }
+  
+  /* Styling for the auto-suggestions list */
+  #suggestions {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    max-height: 200px;
+    overflow-y: auto;
+    position: absolute;
+    background-color: white;
+    top: calc(100% + 10px); /* Position below the search input with a 10px gap */
+    left: 0;
+    width: 100%; /* Match the width of the input */
+  }
+  
+  /* Style for individual suggestions in the list */
+  #suggestions li {
+    padding: 10px; /* Internal spacing */
+    cursor: pointer; /* Change cursor on hover */
+    transition: background-color 0.3s; /* Smooth background color change on hover */
+    border-bottom: 1px solid #ccc; /* Add a separator between suggestions */
+  }
+  
+  /* Hover effect for individual suggestions */
+  #suggestions li:hover {
+    background-color: #f0f0f0; /* Background color change on hover */
+  }
+  
+  /* Style for the suggestion list to make it stand out */
+  .suggestion-list {
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 5px;
+    max-height: 150px;
+    overflow-y: auto;
+    position: absolute;
+    top: calc(100% + 10px); /* Position below the search input with a 10px gap */
+    width: 100%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  
+  /* Styling for the result section */
+  #result {
+    margin-top: 1.25em; /* Top margin */
+  }
+  
+  /* Styling for flag image */
+  .container .flag-img {
+    display: block;
+    width: 45%;
+    min-width: 7.5em;
+    margin: 1.8em auto 1.2em auto;
+  }
+  
+  /* Styling for country name */
+  .container h2 {
+    font-weight: 600;
+    color: #222a43;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 1.8em;
+  }
+  
+  /* Styling for data wrapper */
+  .data-wrapper {
+    margin-bottom: 1em;
+    letter-spacing: 0.3px;
+  }
+  
+  /* Styling for data labels */
+  .container h4 {
+    display: inline;
+    font-weight: 500;
+    color: #222a43;
+  }
+  
+  /* Styling for data values */
+  .container span {
+    color: #5d6274;
+  }
+  
+  /* Styling for error message */
+  .container h3 {
+    text-align: center;
+    font-size: 1.2em;
+    font-weight: 400;
+    color: #ff465a;
+  }
+  
+@media (max-width: 600px) {
+  .container {
+    width: auto;
+  }
+  .container button {
+    width: auto;
+    height: auto;
+    padding: 15px;
+  }
+   .search-wrapper ::-webkit-input-placeholder {
+    display: flex;
+    font-size: 14px;
+
+
+  }
+}

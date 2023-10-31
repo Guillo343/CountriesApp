@@ -24,37 +24,5 @@
     </div>
     
     <script src="script.js"></script>
-
-    <script>
-        const number1 = false;
-        const number2 = false;
-
-        function whichNumber(callback, errorCallback) {
-            if(number1 && number2) {
-                errorCallback({
-                    name:'both',
-                    message: ':number1 and number2 are True'
-                })
-            } else if (number1) {
-                errorCallback({
-                    name: '1',
-                    message: 'number 1 is True'
-                })
-            } else if (number2) {
-                errorCallback({
-                    name:'2',
-                    message:'number 2 is true'
-                })
-            }
-            else {
-                callback('both numbers are false')
-            }
-        }
-        whichNumber((message) => {
-            console.log('The result: ' + message)
-        }, (error) =>{
-            console.log(error.name + ' ' + error.message)
-        })
-    </script>
 </body>
 </html>
